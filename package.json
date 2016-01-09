@@ -1,0 +1,26 @@
+{
+  "name": "adana-format-pretty",
+  "version": "0.1.0",
+  "author": "Izaak Schroeder <izaak.schroeder@gmail.com>",
+  "main": "dist/pretty.js",
+  "license": "CC0-1.0",
+  "repository": "adana-coverage/adana-format-json",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --ignore-path .gitignore .",
+    "prepublish": "./node_modules/.bin/babel -s inline -d dist src/",
+    "spec": "NODE_ENV=test ./node_modules/.bin/_mocha --compilers js:babel-core/register -R spec test/spec",
+    "test": "npm run lint && npm run spec"
+  },
+  "dependencies": {
+    "adana-analyze": "^0.1.0",
+    "babel-code-frame": "^6.3.13"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.3.17",
+    "babel-preset-metalab": "^0.1.2",
+    "chai": "^3.4.1",
+    "eslint": "^2.0.0-alpha-2",
+    "eslint-config-metalab": "^1.0.0-rc.1",
+    "mocha": "^2.3.4"
+  }
+}
